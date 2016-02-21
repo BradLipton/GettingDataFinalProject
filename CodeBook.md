@@ -27,3 +27,5 @@ Row 3: measurement: The measurement in question, in a readable format. Note that
 
 Row 4: mean: The mean of the subject/activity/measurement in question. Obviously, a transformation
       of the original data has been performed:  the mean has been taken.
+      The unit for the acceleration measurements is standard gravity units 'g', and the unit
+      for the gyroscope measurements are radians/second.

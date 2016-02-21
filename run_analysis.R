@@ -1,4 +1,4 @@
-# Load the libraries, clear the workspace, set the working directory
+# Load the libraries, clear the workspace
 library(dplyr)
 library(reshape2)
 rm(list = ls())
