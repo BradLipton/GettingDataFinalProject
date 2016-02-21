@@ -61,7 +61,7 @@ for (i in 1:30) {
       thisdata1 <- filter(filterframe,subject==i)
       for (j in 1:6) {
             thisdata2 <- filter(thisdata1,activity==unique(thisdata1$activity)[j])
-            for (k in 1:length(measurechar)) {
+            for (k in 1:length(unique(thisdata2$measurement))) {
                   thisdata3 <- filter(thisdata2,measurement==unique(thisdata2$measurement)[k])
                   if (nrow(thisdata3) != 0) {
                         thelist <- data.frame(subject=thisdata3$subject[1],
@@ -74,4 +74,4 @@ for (i in 1:30) {
 }
 
 #Write the dataset to a file
-write.csv(averageframe,"Dataset of Averages (Tidy).csv")
+write.table(averageframe,"Dataset of Averages (Tidy).txt",row.name=FALSE)
